@@ -1,0 +1,23 @@
+def binary_to_int(binary_str):
+    """Convert a binary string to an integer."""
+    return int(binary_str, 2)
+
+def find_maximum_of_three_binaries(bin1, bin2, bin3):
+    """Find the maximum of three binary values."""
+    binaries = [bin1, bin2, bin3]
+    max_value = binaries[0]
+
+    for binary in binaries[1:]:
+        if binary_to_int(binary) > binary_to_int(max_value):
+            max_value = binary
+
+    return max_value
+
+# Sample input
+bin1 = input("Enter the first binary value: ")
+bin2 = input("Enter the second binary value: ")
+bin3 = input("Enter the third binary value: ")
+
+# Find and display the maximum binary value
+max_binary = find_maximum_of_three_binaries(bin1, bin2, bin3)
+print(f"The maximum binary value is: {max_binary}")
