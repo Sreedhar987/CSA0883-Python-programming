@@ -1,0 +1,21 @@
+import datetime
+
+def day_of_week(day, month, year):
+    # Create a datetime.date object
+    date = datetime.date(year, month, day)
+    
+    # Get the day of the week as an integer (0=Monday, 6=Sunday)
+    day_index = date.weekday()
+    
+    # Convert the day index to a string representing the day of the week
+    days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    return days_of_week[day_index]
+
+# Sample input
+day = 31
+month = 8
+year = 2019
+
+# Get the day of the week
+day_name = day_of_week(day, month, year)
+print(f"The day of the week for {day}/{month}/{year} is: {day_name}")
