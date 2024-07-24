@@ -1,0 +1,12 @@
+def string_operations():
+    s1 = "Hello"
+    s2 = "World"
+    concatenated = s1 + " " + s2
+    print("Concatenated:", concatenated)
+    reversed_s1 = s1[::-1]
+    print("Reversed s1:", reversed_s1)
+    sliced_s1 = s1[1:4]
+    print("Sliced s1:", sliced_s1)
+    length_s1 = len(s1)
+    print("Length of s1:", length_s1)
+string_operations()  
